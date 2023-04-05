@@ -1,0 +1,59 @@
+
+@use "mixin" as m;
+
+.single-quote-container {
+    @include m.keyframes(fade) {
+        0% {
+            transform: translateX(0%);
+          }
+        
+          50% {
+            transform: translateX(50%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+    }
+
+    @include m.animate(fade,5s,linear,1);
+ 
+
+}
+
+@media only screen and (max-width:667px) {
+    .single-quote-container {
+    width:300px;
+    box-shadow: 1px 1px 2px 1px #888888;
+    margin:20px;
+    padding:20px;
+        
+    } 
+}
+
+.notDisplayed {
+    display: none;
+}
+
+.displayed {
+  
+
+    height: 30px;
+    margin: auto;
+    margin-top:10px;
+    display: block;
+    width:100%;
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+    font-size:14px;
+
+    
+ 
+
+
+}
+
+
+
